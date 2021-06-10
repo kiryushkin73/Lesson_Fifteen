@@ -1,6 +1,3 @@
-@mixin width_1120px {
-  width: 1120px;
-}
 @mixin font-button {
   font-size: 1.8rem;
   line-height: 1.2;
@@ -39,10 +36,22 @@ html {
   font-size: 10px;
   font-style: normal;
   font-weight: 300;
-  width: 1600px;
   margin-right: auto;
   margin-left: auto;
+  @media (max-width: 1600px) {
+    max-width: 92%;
+  }
+  @media (max-width: 1200px) {
+    max-width: 80%;
+  }
+  @media (max-width: 800px) {
+    max-width: 93%;
+  }
+  @media (max-width: 320px) {
+    width: 100%;
+  }
 }
+
 * {
   box-sizing: border-box;
 }
@@ -71,4 +80,9 @@ h2 {
 p {
   @include font-p;
   color: $p_color;
+}
+img {
+  @media (max-width: 320px) {
+    max-width: 100%;
+  }
 }

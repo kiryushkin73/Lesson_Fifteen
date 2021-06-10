@@ -1,5 +1,5 @@
 .Leading-healthcare {
-  width: 1242px;
+  max-width: 1242px;
   @include margin_auto;
   @include flex;
   flex-direction: row;
@@ -8,6 +8,10 @@
     height: 447px;
     margin-bottom: 229px;
     margin-right: 142px;
+  }
+  @media (max-width: 1200px) {
+    display: grid;
+    grid-template-columns: 1fr;
   }
 }
 .healthcare-content {

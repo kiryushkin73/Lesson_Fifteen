@@ -1,5 +1,8 @@
 .footer {
   background: linear-gradient(183.41deg, #67c3f3 -8.57%, #5a98f2 82.96%);
+  @media (max-width: 320px) {
+    width: 200%;
+  }
   p {
     color: $color_customer;
     font-size: 1.8rem;
@@ -7,14 +10,22 @@
     margin-bottom: 31px;
     width: 391px;
   }
+  @media (max-width: 1200px) {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }
 .footer-conteiner {
-  width: 1187px;
+  max-width: 1187px;
   @include margin_auto;
   padding-top: 109px;
   padding-bottom: 97px;
   @include flex;
   align-items: flex-start;
+  @media (max-width: 1200px) {
+    display: flex;
+    flex-wrap: wrap-reverse;
+  }
 }
 .footer-logo {
   img {
@@ -51,6 +62,10 @@ footer {
     ul {
       display: inline-flex;
       flex-direction: column;
+      @media (max-width: 320px) {
+        display: flex;
+        flex-wrap: wrap;
+      }
     }
   }
 }

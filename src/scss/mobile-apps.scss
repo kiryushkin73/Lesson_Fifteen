@@ -1,8 +1,13 @@
 .mobile-apps {
-  width: 1156px;
+  max-width: 1156px;
   @include margin_auto;
   @include flex;
   flex-direction: row-reverse;
+  @media (max-width: 1200px) {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-bottom: 40px;
+  }
 }
 .mobile-img {
   width: 665px;

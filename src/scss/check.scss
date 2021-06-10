@@ -1,7 +1,10 @@
 .check {
-  @include width_1120px;
+  max-width: 1120px;
   @include margin_auto;
   margin-bottom: 202px;
+  @media (max-width: 320px) {
+    width: 200%;
+  }
   h2 {
     text-align: center;
     &::after {
